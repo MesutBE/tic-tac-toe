@@ -1,28 +1,17 @@
-# Deploying the project
-1. npm run build
-1. npm install -g serve
-1. serve -s build
-1. make your page live.. settings => https://mesutbe.github.io/tic-tac-toe/
-1. Open your package.json and add a homepage field for your project: "homepage": "https://myusername.github.io/my-app"
-1. heroku create tictactoe-a --buildpack mars/create-react-app
-1. git push heroku master
-1. app.json
-{
-  "buildpacks": [
-    {
-      "url": "mars/create-react-app"
-    }
-  ]
-}
-1. Procfile
-web: bin/boot
-1. The config file `static.json` should be committed at the root of the repo.
-{
-  "root": "build/",
-  "routes": {
-    "/**": "index.html"
-  }
-}
+# Creating React App Step by Step
 
-confirmation
-1. heroku buildpacks
+1. `https://create-react-app.dev/docs/getting-started/`
+1. If you want to create your project in an exciting folder type to terminal: `npx create-react-app .`
+1. If you want to create your project folder then type to terminal: `npx create-react-app your-app-name`
+1. To see the boilerplate type terminal `npm start`
+1. To begin in a clean project you can clean `App.css`, `App.js` files.
+1. You can start your project..
+
+For this project no need to build.
+
+# Deploying the project
+1. heroku create -b https://github.com/mars/create-react-app-buildpack.git
+1. git add .
+1. git commit -m "react-create-app on Heroku"
+1. git push heroku master
+1. heroku open
